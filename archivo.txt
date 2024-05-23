@@ -1,0 +1,4 @@
+PRODUCTO   CANTIDAD   PRECIO UNIDAD
+Pera   2   1000
+manzana   1   4000
+La venta total es: 6000
