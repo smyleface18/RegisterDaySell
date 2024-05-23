@@ -1,4 +1,5 @@
 PRODUCTO   CANTIDAD   PRECIO UNIDAD
-Pera   2   1000
-manzana   1   4000
-La venta total es: 6000
+pera      2      1000
+manzana      5      2000
+mora      2      500
+La venta total es: 13000

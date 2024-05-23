@@ -39,7 +39,7 @@ public class SaveRegister {
                 int accumulator=0;
                 for (int i = 0; i < arrayList.size(); i++) {
                     String list [] = arrayList.get(i);
-                     pw.println(list[0]+"      "+list[1]+"      "+list[2]);
+                     pw.println(list[0]+"          "+list[1]+"           "+list[2]);
                      accumulator += Integer.parseInt(list[2])*Integer.parseInt(list[1]);
 
                 }
@@ -53,6 +53,37 @@ public class SaveRegister {
        
 
            
+    }
+    
+    
+    public ArrayList<String> data() throws IOException{
+        
+        ArrayList <String> data = new ArrayList ();
+        String line;
+        
+        try{
+            while((line = buffereadReader.readLine()) != null){
+            data.add(line);
+
+            }
+        
+        }
+        catch(IOException e){
+            System.out.println("no se pudo leer el archivo");
+        }
+        finally {
+            try{
+                if(fileReader != null){
+                    fileReader.close();                
+                }
+        }
+        catch(IOException e2){
+            
+        }
+        
+
+        }
+        return data;
     }
 
 }

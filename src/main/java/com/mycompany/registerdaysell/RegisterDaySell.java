@@ -42,9 +42,19 @@ public class RegisterDaySell {
             System.out.println("Quires salirte?");
             System.out.println("1 si");
             System.out.println("2 No");
+            System.out.println("3 ver el contenido del registro que se lleva");
             int in  = read.nextInt();
             if(in == 1){
                 value = false;
+            }
+            else if(in == 3){
+                ArrayList <String> dataFile = new ArrayList<> ();
+
+                dataFile = saveRegister.data();
+
+                for (String string : dataFile) {
+                    System.out.println(string);
+                }           
             }
             read.nextLine();
             
@@ -57,6 +67,8 @@ public class RegisterDaySell {
         catch(IOException e){
             System.out.println("no se puedo guardar el registro");
         }
+        
+
         
     }
 }
